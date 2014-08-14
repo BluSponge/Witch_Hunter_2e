@@ -1,0 +1,236 @@
+@font-face {
+  font-family: 'IM Fell English SC';
+  font-style: normal;
+  font-weight: 400;
+  src: local('IM FELL English SC'), local('IM_FELL_English_SC'), url(http://themes.googleusercontent.com/static/fonts/imfellenglishsc/v3/h3Tn6yWfw4b5qaLD1RWvz9gX5f6-V0DImePmAcKHNfQ.ttf) format('truetype');
+}
+
+h1, h2, h3 {
+   font-family: 'IM Fell English SC', serif;
+
+   /* Your other headings CSS */
+}
+
+.charsheet label {
+    display: inline-block;
+    width: 75px;
+    text-align: right;
+    padding-bottom: 0px;
+}
+
+.charsheet input {
+    display: inline-block;
+    width: 155px;
+}
+
+.charsheet {
+    background-color: white;
+}
+
+.charsheet select {
+    width: 42px;
+}
+
+select { 
+    margin-bottom: 0px; 
+}
+
+span.sheet-skill-name {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 28px;
+}
+
+div.sheet-row { margin-bottom: 2px; }
+
+/* Hide actual dot/checkbox */
+input[type="radio"],
+input[type="checkbox"]
+{
+    position: absolute;
+    opacity: 1;
+    width:15px;
+    cursor: pointer;
+    z-index: 1;
+    margin-top: 6px;
+}
+
+/* Styles common to fake dot and checkbox */
+input[type="radio"] + span::before,
+input[type="checkbox"] + span::before
+{
+    border: solid 1px #a8a8a8;
+    line-height: 14px;
+    text-align: middle;
+    display: inline-block;
+    vertical-align: middle;
+    
+    -moz-box-shadow: 0 0 2px #ccc;
+    -webkit-box-shadow: 0 0 2px #ccc;
+    box-shadow: 0 0 2px #ccc;
+    
+    background: #f6f6f6;
+    background: -moz-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -webkit-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -ms-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -o-radial-gradient(#f6f6f6, #dfdfdf);
+    background: radial-gradient(#f6f6f6, #dfdfdf);
+}
+
+/* Styles unique to fake dot (checked or left of checked) */
+input[type="radio"]+ span::before
+{
+    content: "•";
+    width: 12px;
+    height: 12px;
+    font-size: 36px;
+    
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+/* Styles unique to fake checkbox (unchecked) */
+input[type="checkbox"] + span::before
+{
+    position:relative;
+    content: "";
+    opacity: .25;
+    width: 14px;
+    height: 14px;
+    font-size: 12px;
+    
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+/* Styles unique to fake checkbox (checked) */
+input[type="checkbox"]:checked + span::before
+{
+    content: "✖";
+    color: #a00;
+    
+    -moz-box-shadow: 0 0 2px transparent;
+    -webkit-box-shadow: 0 0 2px transparent;
+    box-shadow: 0 0 2px transparent;
+}
+
+/* Remove dot from all radios _after_ selected one */
+input[type="radio"]:checked ~ input[type="radio"]+ span::before
+{    
+    content: "";
+}
+
+input.sheet-used+span::before
+{
+    content: "✖";
+    width: 12px;
+    height: 12px;
+    font-size: 12px;
+    
+    -moz-border-radius: 0%;
+    -webkit-border-radius: 0%;
+    border-radius: 0%;
+}
+
+input.sheet-zero:checked + span::before
+{
+    opacity: 0;
+}
+
+input.sheet-zero:hover + span::before
+{
+    opacity: 1;
+}
+
+input.sheet-zero+ span::before
+{
+    font-size: 12px;
+    content: "✖";
+    opacity: 0.25;
+}
+
+input.sheet-forms
+{
+    width: 118px;
+}
+
+input.sheet-forms + span::before
+{
+    margin-left: 53px;
+    margin-right: 53px;
+    content: ""; 
+}
+
+/*Hiding Sections*/
+input.arrow
+{
+    display: none;
+}
+
+input.sheet-arrow:checked ~ div.sheet-body
+{
+    float: left;
+}
+    
+input.sheet-forms:checked + span::before{ content: "•"; }
+
+/*Sheet Tabs*/
+div.sheet-tab-content { display: none; }
+
+input.sheet-tab1:checked ~ div.sheet-tab1,
+input.sheet-tab2:checked ~ div.sheet-tab2,
+input.sheet-tab3:checked ~ div.sheet-tab3,
+input.sheet-tab4:checked ~ div.sheet-tab4,
+input.sheet-tab5:checked ~ div.sheet-tab5,
+input.sheet-tab6:checked ~ div.sheet-tab6 {
+    display: block;
+}
+
+input.sheet-tab
+{
+    width: 121px;
+    height: 20px;
+    position: relative;
+    top: 5px;
+    margin: 4px;
+    cursor: pointer;
+    z-index: 1;
+    font-family: 'IM Fell English SC', serif;
+}
+
+input.sheet-tab::before
+{
+    content: attr(title);
+
+
+    border: solid 2px #E8E8E8;
+    text-align: center;
+    display: inline-block;
+    background: #FFFFFF;
+    width: 121px;
+    height: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input.sheet-tab:checked::before
+{
+    background: #dcdcdc;
+    background: -moz-linear-gradient(to top, #fcfcfc, #F0F0F0, #fcfcfc);
+    background: -webkit-linear-gradient(to top, #fcfcfc, #F0F0F0, #fcfcfc);
+    background: -ms-linear-gradient(to top, #fcfcfc, #F0F0F0, #fcfcfc);
+    background: -o-linear-gradient(to top, #fcfcfc, #F0F0F0, #fcfcfc);
+    background: linear-gradient(to top, #fcfcfc, #F0F0F0, #fcfcfc);
+    border-color: #C0C0C0;
+}
+
+div.sheet-tab-content
+{
+    border: 0px solid #a8a8a8;
+    border-top-color: #000;
+    margin: 2px 0 0 5px;
+    padding: 5px;
+}
+/*end Sheet Tabs*/
