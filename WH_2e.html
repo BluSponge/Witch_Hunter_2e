@@ -1081,20 +1081,23 @@
             </table>
         </div>
         <div class="sheet-row">
-            <span class="sheet-skill-name" style="line-height:28px">Injury Level&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span class="sheet-skill-name" style="line-height:28px">Injury Level&nbsp;&nbsp;&nbsp;&nbsp;</span>
             <select name="attr_injury" style="width: 8em">
                 <option value="0" selected="true">Healthy</option>
                 <option value="1">Nicked</option>
                 <option value="2">Wounded</option>
                 <option value="3">Dying</option>
             </select>
-            <input type="number" style="width: 3em" name="attr_wounds" value="(@{injury}+@{exhaustion})" disabled="true"/>
+            <input type="number" style="width: 3em" name="attr_wounds" value="{(@{injury}+@{exhaustion})-@{ignoreinjury}" disabled="true"/>
         </div>
-    
+        <div class="sheet-row">
+            <input type="checkbox" name="attr_ignoreinjury" value="@{injury}"/><span></span>
+            <i>Ignore Injury Penalities</i>
+        </div>
     </div>
     <div class="sheet-col" style="width:5px">
     </div>
-    <div class="sheet-col" align="left" style="width:130px">
+    <div class="sheet-col" align="left" style="width:135px">
         <div class="sheet-row">
             <input type="checkbox" name="attr_RESSpec" value="1"/><span></span>
             <span class="sheet-skill-name" style="line-height:28px">Fear</span>
