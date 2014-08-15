@@ -28,7 +28,10 @@
             <option value="@{intuition}">Intuition</option> 
             <option value="@{personality}">Personality</option> 
         </select>
-        <button type='roll' name='roll_DP1roll{[[((@{resolve}+@{courage})-(@{shaken}+@{wounds})+?{Modifier|0})]]d10!sd}>[[7-@{RESSpec}]]' value='/em rolls: \n/r {((@{DP1Skl}+@{DP1Abl})-@{wounds})d10!sd}>[[7-@{DP1Spec}]]'></button>
+        <button type='roll' value='/em rolls...\n/r {[[(@{DP1Skl}+@{DP1Abl}-@{wounds}+?{Modifier|0})]]d10!sd}>[[7-@{DP1Spec}]]' name='roll_DicePool01'></button>
+    
+        
+        
     </div>
     <div class="sheet-col" style="width:5px">
     </div>
@@ -49,7 +52,7 @@
             <option value="@{intuition}">Intuition</option> 
             <option value="@{personality}">Personality</option> 
         </select>
-        <button type='roll' name='roll_DP2roll' value='/em rolls: \n/r {((@{DP2Skl}+@{DP2Abl})-@{wounds})d10!sd}>[[7-@{DP2Spec}]]'></button>
+        <button type='roll' value='/em rolls...\n/r {[[(@{DP2Skl}+@{DP2Abl}-@{wounds}+?{Modifier|0})]]d10!sd}>[[7-@{DP2Spec}]]' name='roll_DicePool02'></button>
     </div>
     <div class="sheet-col" style="width:5px">
     </div>
@@ -70,7 +73,8 @@
             <option value="@{intuition}">Intuition</option> 
             <option value="@{personality}">Personality</option> 
         </select>
-        <button type='roll' name='roll_DP3roll' value='/em rolls: \n/r {((@{DP3Skl}+@{DP3Abl})-@{wounds})d10!sd}>[[7-@{DP3Spec}]]'></button>
+        <button type='roll' value='/em rolls...\n/r {[[(@{DP3Skl}+@{DP3Abl}-@{wounds}+?{Modifier|0})]]d10!sd}>[[7-@{DP3Spec}]]' name='roll_DicePool03'></button>
+
     </div>
 </div>
 
@@ -325,7 +329,7 @@
             <div class="sheet-row">
                 <select name="attr_personality" class="dtype">
                     <option value="1">1</option>
-                    <option value="2">2</option>
+                    <option value="2" selected="true">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
@@ -974,7 +978,7 @@
                 <option value="@{intuition}">Intuition</option>
                 <option value="@{personality}">Personality</option>
             </select>
-            <button type='roll' value='/em rolls another skill\n/r {[[(@{other1}+@{other1Ab}-@{wounds}+?{Modifier|0})]]d10!sd}>7' name='roll_extraskill1'></button>
+            <button type='roll' value='/em rolls @{otherSkl1}\n/r {[[(@{other1}+@{other1Ab}-@{wounds}+?{Modifier|0})]]d10!sd}>7' name='roll_extraskill1'></button>
         </div>
         <fieldset class="repeating_extraskills">   
         <div class="sheet-row">
@@ -1088,10 +1092,10 @@
                 <option value="2">Wounded</option>
                 <option value="3">Dying</option>
             </select>
-            <input type="number" style="width: 3em" name="attr_wounds" value="{(@{injury}+@{exhaustion})-@{ignoreinjury}" disabled="true"/>
+            <input type="number" style="width: 3em" name="attr_wounds" value="{(@{injury}+@{exhaustion})}" disabled="true"/>
         </div>
         <div class="sheet-row">
-            <input type="checkbox" name="attr_ignoreinjury" value="@{injury}"/><span></span>
+            <input type="checkbox" name="attr_ignoreinjury" value="0"/><span></span>
             <i>Ignore Injury Penalities</i>
         </div>
     </div>
@@ -1275,7 +1279,7 @@
             <input type="number" style="width: 3em" name="attr_unarmedattackTl" value="@{unarmedattackSk}+@{unarmedattackAb}" disabled="true"/>
           </span></td>
             <td><button align="center" type='roll' value='/em makes an Unarmed Attack\n/r {[[(@{unarmed}+@{unarmedattackAB}-@{wounds}+?{Modifier|0})]]d10!sd}>[[7-@{unarmedSPC}]] vs @{target|avoidance} [Avoidance]' name='roll_unarmedattack'></button></td>
-            <td><button type='roll' value='/em rolls [[{((?{Bonus Successes|0}+@{unarmedattackDM}+@{unarmedattackAb})-(?{Opponent Parry Successes}+@{target|armor}+@{wounds}))d10!sd}>7]] points of damage' name='roll_unarmeddamage'></button></td>        
+            <td><button type='roll' value='/em rolls [[{((?{Bonus Successes|0}+@{unarmedattackAB}+@{unarmedattackDM})-(?{Opponent Dodge Successes}-@{target|armor}))d10!sd}>7]] points of damage' name='roll_unarmeddamage'></button></td>        
             </tr>
         <tr>
           <td><input type='checkbox' name='attr_mlweapon01SPC' value='1' /><span></span><span></span></td>
@@ -1303,7 +1307,7 @@
             <input type="number" style="width: 3em" name="attr_mlweapon01Tl" value="@{mlweapon01Sk}+@{mlweapon01Ab}-@{mlweapon01C}" disabled="true"/>
           </span></td>
           <td><button type='roll' value='/em attacks with a @{mlweapon01}\n/r {[[((@{mlweapon01Sk}+@{mlweapon01Ab})-(@{mlweapon01C}+@{wounds})+?{Modifier|0})]]d10!sd}>[[7-@{mlweapon01SPC}]] vs @{target|avoidance} [Avoidance]' name='roll_mlweapon01attack'></button></td>
-          <td><button type='roll' value='/em rolls [[{((?{Bonus Successes|0}+@{mlweapon01DM}+@{mlweapon01Ab})-(?{Opponent Parry Successes}+@{target|armor}+@{wounds}))d10!sd}>7]] points of damage' name='roll_mlweapon01damage'></button></td>
+          <td><button type='roll' value='/em rolls [[{((?{Bonus Successes|0}+@{mlweapon01Ab}+@{mlweapon01DM})-(?{Opponent Dodge Successes}-@{target|armor}))d10!sd}>7]] points of damage' name='roll_mlweapon01damage'></button></td>
        
        
            
@@ -1333,8 +1337,8 @@
           <td><span>
             <input type="number" style="width: 3em" name="attr_mlweapon02Tl" value="@{mlweapon02Sk}+@{mlweapon02Ab}-@{mlweapon02C}" disabled="true"/>
           </span></td>
-            <td><button type='roll' value='@{name} makes an Attack roll with a @{mlweapon02}\n/r {[[((@{mlweapon02Sk}+@{mlweapon02Ab})-(@{mlweapon02C}+@{wounds})+?{Modifier|0})]]d10!sd}>[[7-@{mlweapon02SPC}]] vs @{target|avoidance} [Avoidance]' name='roll_mlweapon02attack'></button></td>
-            <td><button type='roll' value='/em rolls [[{((?{Bonus Successes|0}+@{mlweapon02DM}+@{mlweapon02Ab})-(?{Opponent Parry Successes}+@{target|armor}+@{wounds}))d10!sd}>7]] points of damage' name='roll_mlweapon02damage'></button></td>
+            <td><button type='roll' value='/em attacks with a @{mlweapon02}\n/r {[[((@{mlweapon02Sk}+@{mlweapon02Ab})-(@{mlweapon02C}+@{wounds})+?{Modifier|0})]]d10!sd}>[[7-@{mlweapon02SPC}]] vs @{target|avoidance} [Avoidance]' name='roll_mlweapon02attack'></button></td>
+            <td><button type='roll' value='/em rolls [[{((?{Bonus Successes|0}+@{mlweapon02Ab}+@{mlweapon02DM})-(?{Opponent Dodge Successes}-@{target|armor}))d10!sd}>7]] points of damage' name='roll_mlweapon02damage'></button></td>
         </tr>
         </table>
 <!-- Repeating Melee Weapons -->
@@ -1365,8 +1369,8 @@
           <td><span>
             <input type="number" style="width: 3em" name="attr_mlweaponTl" value="@{mlweaponSk}+@{mlweaponAb}-@{mlweaponC}" disabled="true"/>
           </span></td>
-            <td><button type='roll' value='@{name} makes an Attack roll with a @{mlweapon}\n/r {[[((@{mlweaponSk}+@{mlweaponAb})-(@{mlweaponC}+@{wounds})+?{Modifier|0})]]d10!sd}>[[7-@{mlweaponSPC}]] vs @{target|avoidance} [Avoidance]' name='roll_mlweapon0attack'></button></td>
-            <td><button type='roll' value='/em rolls [[{((?{Bonus Successes|0}+@{mlweaponDM}+@{mlweaponAb})-(?{Opponent Parry Successes}+@{target|armor}+@{wounds}))d10!sd}>7]] points of damage' name='roll_mlweapondamage'></button></td>                        
+            <td><button type='roll' value='/em attacks with a with a @{mlweapon}\n/r {[[((@{mlweaponSk}+@{mlweaponAb})-(@{mlweaponC}+@{wounds})+?{Modifier|0})]]d10!sd}>[[7-@{mlweaponSPC}]] vs @{target|avoidance} [Avoidance]' name='roll_mlweapon0attack'></button></td>
+            <td><button type='roll' value='/em rolls [[{((?{Bonus Successes|0}+@{mlweaponAb}+@{mlweaponDM})-(?{Opponent Dodge Successes}-@{target|armor}))d10!sd}>7]] points of damage' name='roll_mlweapondamage'></button></td>                        
             </tr>
         </table>
         </fieldset>
@@ -1420,8 +1424,10 @@
           <td><span>
             <input type="number" style="width: 3em" name="attr_rgweapon01Tl" value="@{rgweapon01Sk}+@{rgweapon01Ab}-@{rgweapon01C}" disabled="true"/>
           </span></td>
-            <td><button type='roll' value='@{name} makes an Attack roll with a @{rgweapon01}\n/r {[[((@{rgweapon01Sk}+@{rgweapon01Ab})-(@{rgweapon01C}+?{Range Penalty|0}+@{wounds})+?{Modifier|0})]]d10!sd}>[[7-@{rgweapon01SPC}]] vs @{target|avoidance} [Avoidance]' name='roll_rgweapon01attack'></button></td>
-            <td><button type='roll' value='/em rolls [[{((?{Bonus Successes|0}+@{rgweapon01DM}+@{rgweapon01Ab})-(?{Opponent Dodge Successes}+@{target|armor}+@{wounds}))d10!sd}>7]] points of damage' name='roll_rgweapon01damage'></button></td>
+            <td><button type='roll' value='/em attacks with a with a @{rgweapon01}\n/r {[[((@{rgweapon01Sk}+@{rgweapon01Ab})-(@{rgweapon01C}+?{Range Penalty|0}+@{wounds})+?{Modifier|0})]]d10!sd}>[[7-@{rgweapon01SPC}]] vs @{target|avoidance} [Avoidance]' name='roll_rgweapon01attack'></button></td>
+            <td><button type='roll' value='/em rolls [[{((?{Bonus Successes|0}+@{rgweapon01Ab}+@{rgweapon01DM})-(?{Opponent Dodge Successes}-@{target|armor}))d10!sd}>7]] points of damage' name='roll_rgweapon01damage'></button></td>
+        
+            
         </tr>
         <tr>
           <td><input type='checkbox' name='attr_rgweapon02SPC' value='1' /><span></span></td>
@@ -1454,8 +1460,8 @@
           <td><span style="width:20%">
             <input type="number" style="width: 3em" name="attr_rgweapon02Tl" value="@{rgweapon02Sk}+@{rgweapon02Ab}-@{rgweapon02C}" disabled="true"/>
           </span></td>
-          <td><button type='roll' value='@{name} makes an Attack roll with a @{rgweapon02}\n/r {[[((@{rgweapon02Sk}+@{rgweapon02Ab})-(@{rgweapon02C}+?{Range Penalty|0}+@{wounds})+?{Modifier|0})]]d10!sd}>[[7-@{rgweapon02SPC}]] vs @{target|avoidance} [Avoidance]' name='roll_rgweapon02attack'></button></td>
-            <td><button type='roll' value='/em rolls [[{((?{Bonus Successes|0}+@{rgweapon02DM}+@{rgweapon02Ab})-(?{Opponent Dodge Successes}+@{target|armor}+@{wounds}))d10!sd}>7]] points of damage' name='roll_rgweapon02damage'></button></td>
+          <td><button type='roll' value='/em attacks with a with a @{rgweapon02}\n/r {[[((@{rgweapon02Sk}+@{rgweapon02Ab})-(@{rgweapon02C}+?{Range Penalty|0}+@{wounds})+?{Modifier|0})]]d10!sd}>[[7-@{rgweapon02SPC}]] vs @{target|avoidance} [Avoidance]' name='roll_rgweapon02attack'></button></td>
+            <td><button type='roll' value='/em rolls [[{((?{Bonus Successes|0}+@{rgweapon02DM}+@{rgweapon02Ab})-(?{Opponent Dodge Successes}+@{target|armor}))d10!sd}>7]] points of damage' name='roll_rgweapon02damage'></button></td>
         </tr>
       </table>
 <!-- Repeating Ranged Weapons -->
@@ -1492,8 +1498,8 @@
           <td><span style="width:20%">
             <input type="number" style="width: 3em" name="attr_rgweaponTl" value="@{rgweaponSk}+@{rgweaponAb}-@{rgweaponC}" disabled="true"/>
           </span></td>
-          <td><button type='roll' value='@{name} makes an Attack roll with a @{rgweapon}\n//r {[[((@{rgweaponSk}+@{rgweaponAb})-(@{rgweaponC}+?{Range Penalty|0}+@{wounds})+?{Modifier|0})]]d10!sd}>[[7-@{rgweaponSPC}]] vs @{target|avoidance} [Avoidance]' name='roll_rgweaponattack'></button></td>
-            <td><button type='roll' value='/em rolls [[{((?{Bonus Successes|0}+@{rgweaponDM}+@{rgweaponAb})-(?{Opponent Dodge Successes}+@{target|armor}+@{wounds}))d10!sd}>7]] points of damage' name='roll_rgweapondamage'></button></td>
+          <td><button type='roll' value='/em attacks with a with a @{rgweapon}\n//r {[[((@{rgweaponSk}+@{rgweaponAb})-(@{rgweaponC}+?{Range Penalty|0}+@{wounds})+?{Modifier|0})]]d10!sd}>[[7-@{rgweaponSPC}]] vs @{target|avoidance} [Avoidance]' name='roll_rgweaponattack'></button></td>
+            <td><button type='roll' value='/em rolls [[{((?{Bonus Successes|0}+@{rgweaponDM}+@{rgweaponAb})-(?{Opponent Dodge Successes}+@{target|armor}))d10!sd}>7]] points of damage' name='roll_rgweapondamage'></button></td>
         </tr>
       </table>
       </fieldset>
