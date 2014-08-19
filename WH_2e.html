@@ -6,77 +6,8 @@
 <title>Witch Hunter Character Sheet Roll20</title>
 </head>
 <body>
-<!-- Character Sheet Top Experiment -->
-<!-- Obscure/Custom Dice Pools -->
 <div align="center">
-<div class='sheet-3colrow'>
-</div>
-<!-- Custom Roll 1 -->
-    <div class="sheet-col" style="width:245px" align="center">
-        <input type="checkbox" name="attr_DP1Spec" value="1"/><span></span>
-        <select name="attr_DP1Skl" style="width:90px"> 
-            <option value="0" selected>Unskilled</option> <option value="@{acrobatics}">Acrobatics</option> <option value="@{animalcare}">Animal Care</option> <option value="@{athletics}">Athletics</option> <option value="@{boating}">Boating</option> <option value="@{charm}">Charm</option> <option value="@{command}">Command</option> <option value="@{concentrate}">Concentrate</option> <option value="@{craft}">Craft</option> <option value="@{empathy}">Empathy</option> <option value="@{endurance}">Endurance</option> <option value="@{gamble}">Gamble</option> <option value="@{gunnery}">Gunnery</option> <option value="@{heal}">Heal</option> <option value="@{marksman}">Marksman</option> <option value="@{melee}">Melee</option> <option value="@{mysticism}">Mysticism</option> <option value="@{navigation}">Navigation</option> <option value="@{notice}">Notice</option> <option value="@{pantomime}">Pantomime</option> <option value="@{perform}">Perform</option> <option value="@{prayer}">Prayer</option> <option value="@{ranged}">Ranged</option> <option value="@{reflexes}">Reflexes</option> <option value="@{resolve}">Resolve</option> <option value="@{ride}">Ride</option> <option value="@{scholarship}">Scholarship</option> <option value="@{sorcery}">Sorcery</option> <option value="@{stealth}">Stealth</option> <option value="@{subterfuge}">Subterfuge</option> <option value="@{survival}">Survival</option> <option value="@{unarmed}">Unarmed</option> <option value="@{other1}">Extra Skill</option>  
-        </select>
-        <select name="attr_DP1Abl" style="width:90px"> 
-            <option value="@{strength}" selected>Strength</option> 
-            <option value="@{agility}">Agility</option> 
-            <option value="@{toughness}">Toughness</option> 
-            <option value="@{education}">Education</option> 
-            <option value="@{reason}">Reason</option> 
-            <option value="@{will}">Will</option> 
-            <option value="@{courage}">Courage</option> 
-            <option value="@{intuition}">Intuition</option> 
-            <option value="@{personality}">Personality</option> 
-        </select>
-        <button type='roll' value='/em rolls...\n/r {[[(@{DP1Skl}+@{DP1Abl}-@{wounds}+?{Modifier|0})]]d10!sd}>[[7-@{DP1Spec}]]' name='roll_DicePool01'></button>
-    
-        
-        
-    </div>
-    <div class="sheet-col" style="width:5px">
-    </div>
-<!-- Custom Roll 2 -->
-    <div class="sheet-col" style="width:245px" align="center">
-        <input type="checkbox" name="attr_DP2Spec" value="1"/><span></span>
-        <select name="attr_DP2Skl" style="width:90px"> 
-            <option value="0">Unskilled</option> <option value="@{acrobatics}">Acrobatics</option> <option value="@{animalcare}">Animal Care</option> <option value="@{athletics}">Athletics</option> <option value="@{boating}">Boating</option> <option value="@{charm}">Charm</option> <option value="@{command}">Command</option> <option value="@{concentrate}">Concentrate</option> <option value="@{craft}">Craft</option> <option value="@{empathy}">Empathy</option> <option value="@{endurance}">Endurance</option> <option value="@{gamble}">Gamble</option> <option value="@{gunnery}">Gunnery</option> <option value="@{heal}">Heal</option> <option value="@{marksman}">Marksman</option> <option value="@{melee}">Melee</option> <option value="@{mysticism}">Mysticism</option> <option value="@{navigation}">Navigation</option> <option value="@{notice}">Notice</option> <option value="@{pantomime}">Pantomime</option> <option value="@{perform}">Perform</option> <option value="@{prayer}">Prayer</option> <option value="@{ranged}">Ranged</option> <option value="@{reflexes}">Reflexes</option> <option value="@{resolve}"selected>Resolve</option> <option value="@{ride}">Ride</option> <option value="@{scholarship}">Scholarship</option> <option value="@{sorcery}">Sorcery</option> <option value="@{stealth}">Stealth</option> <option value="@{subterfuge}">Subterfuge</option> <option value="@{survival}">Survival</option> <option value="@{unarmed}">Unarmed</option> <option value="@{other1}">Extra Skill</option>  
-        </select>
-        <select name="attr_DP2Abl" style="width:90px"> 
-            <option value="@{strength}" selected>Strength</option> 
-            <option value="@{agility}">Agility</option> 
-            <option value="@{toughness}">Toughness</option> 
-            <option value="@{education}">Education</option> 
-            <option value="@{reason}">Reason</option> 
-            <option value="@{will}">Will</option> 
-            <option value="@{courage}" selected>Courage</option> 
-            <option value="@{intuition}">Intuition</option> 
-            <option value="@{personality}">Personality</option> 
-        </select>
-        <button type='roll' value='/em rolls...\n/r {[[(@{DP2Skl}+@{DP2Abl}-@{wounds}+?{Modifier|0})]]d10!sd}>[[7-@{DP2Spec}]]' name='roll_DicePool02'></button>
-    </div>
-    <div class="sheet-col" style="width:5px">
-    </div>
-<!-- Custom Roll 3 -->
-    <div class="sheet-col" style="width:245px" align="center">
-        <input type="checkbox" name="attr_DP3Spec" value="1"/><span></span>
-        <select name="attr_DP3Skl" style="width:90px"> 
-            <option value="0">Unskilled</option> <option value="@{acrobatics}">Acrobatics</option> <option value="@{animalcare}">Animal Care</option> <option value="@{athletics}">Athletics</option> <option value="@{boating}">Boating</option> <option value="@{charm}">Charm</option> <option value="@{command}">Command</option> <option value="@{concentrate}">Concentrate</option> <option value="@{craft}">Craft</option> <option value="@{empathy}">Empathy</option> <option value="@{endurance}" selected>Endurance</option> <option value="@{gamble}">Gamble</option> <option value="@{gunnery}">Gunnery</option> <option value="@{heal}">Heal</option> <option value="@{marksman}">Marksman</option> <option value="@{melee}">Melee</option> <option value="@{mysticism}">Mysticism</option> <option value="@{navigation}">Navigation</option> <option value="@{notice}">Notice</option> <option value="@{pantomime}">Pantomime</option> <option value="@{perform}">Perform</option> <option value="@{prayer}">Prayer</option> <option value="@{ranged}">Ranged</option> <option value="@{reflexes}">Reflexes</option> <option value="@{resolve}">Resolve</option> <option value="@{ride}">Ride</option> <option value="@{scholarship}">Scholarship</option> <option value="@{sorcery}">Sorcery</option> <option value="@{stealth}">Stealth</option> <option value="@{subterfuge}">Subterfuge</option> <option value="@{survival}">Survival</option> <option value="@{unarmed}">Unarmed</option> <option value="@{other1}">Extra Skill</option>  
-        </select>
-        <select name="attr_DP3Abl" style="width:90px"> 
-            <option value="@{strength}">Strength</option> 
-            <option value="@{agility}">Agility</option> 
-            <option value="@{toughness}" selected>Toughness</option> 
-            <option value="@{education}">Education</option> 
-            <option value="@{reason}">Reason</option> 
-            <option value="@{will}">Will</option> 
-            <option value="@{courage}">Courage</option> 
-            <option value="@{intuition}">Intuition</option> 
-            <option value="@{personality}">Personality</option> 
-        </select>
-        <button type='roll' value='/em rolls...\n/r {[[(@{DP3Skl}+@{DP3Abl}-@{wounds}+?{Modifier|0})]]d10!sd}>[[7-@{DP3Spec}]]' name='roll_DicePool03'></button>
 
-    </div>
-</div>
 
 <!-- Title Graphics -->
 <div align="center"><img src="http://i1172.photobucket.com/albums/r561/blusponge/WH2-CS-top_zps8c1ba667.png">
@@ -88,12 +19,11 @@
 <input type="radio" name="attr_tab" class="sheet-tab sheet-tab5" value="5" title="Gear" />
 <input type="radio" name="attr_tab" class="sheet-tab sheet-tab6" value="6" title="Organized Play" />
 <br/>
-<br/>
 
 <!-- Tab 1: The Basics -->
 <div class="sheet-tab-content sheet-tab1">
 <br/>
-<div class='sheet-3colrow'>
+    <div class='sheet-3colrow'>
     </div>
         <div class="sheet-col" style="width:90px" align="left">
             <h4 style="line-height:28px">Name:</h4>
@@ -160,37 +90,91 @@
         </div>
     <br/>
     <br/>
-<!-- SURVIVAL POINTS -->
+    
+<!-- SURVIVAL POINTS Revised -->
     <div class='sheet-3colrow'>
     </div>
         <div class="sheet-col" style="width:90px" align="left">
-            <h4 style="line-height:28px">Total SP:</h4> 
+            <div class="sheet-row">
+                <h4 style="line-height:28px">Rank:</h4>
+            </div>
+            <div class="sheet-row">
+                <h4 style="line-height:28px">Starting SP:</h4>
+            </div>
         </div>
         <div class="sheet-col" style="width:155px" align="left">
-            <input type="text" name="attr_SPtotal" />
-        </div>
-        <div class="sheet-col" style="width:5px">
-        </div>
-        <div class="sheet-col" style="width:90px" align="left">
-            <h4 style="line-height:28px">Unspent SP:</h4> 
-        </div>
-        <div class="sheet-col" style="width:155px" align="left">
-            <input type="text" name="attr_SPunspent" />
-        </div>
-        <div class="sheet-col" style="width:5px">
-        </div>
-        <div class="sheet-col" style="width:90px" align="left">
-            <h4 style="line-height:28px">Rank:</h4> 
-        </div>
-        <div class="sheet-col" style="width:155px" align="left">
-            <select name="attr_rank" class="dtype" value="0">
-                <option value="1" selected="true">1</option>
-                <option value="2">2 (450 SP)</option>
-                <option value="3">3 (600 SP)</option>
+            <div class="sheet-row">
+                <select name="attr_rank" class="dtype" value="0">
+                    <option value="1" selected="true">1</option>
+                    <option value="2">2 (450 SP)</option>
+                    <option value="3">3 (600 SP)</option>
+                </select>
+            </div>
+            <div class="sheet-row">
+                <select name="attr_powerlvl" class="dtype" value="0">
+                    <option value="200">200 (Gritty)</option>
+                    <option value="300" selected="true">300 (Heroic)</option>
+                    <option value="400">400 (Cinematic)</option>
+                </select>
+            <select name="attr_flaws" class="dtype" value="0">
+                <option value="0" selected="true">0 Flaw</option>
+                <option value="50">1 Flaw</option>
+                <option value="80">2 Flaws</option></option>
+                <option value="100">3 Flaws</option>
             </select>
+            <input type="number" style="width: 4em" name="attr_starttotal" value="@{powerlvl}+@{flaws}" disabled="true"/>
+            </div>
+        </div>
+        <div class="sheet-col" style="width:5px">
+        </div>
+        <div class="sheet-col" style="width:90px" align="left">
+            <div class="sheet-row">
+                <h4 style="line-height:28px">Total SP:</h4> 
+            </div>
+            <div class="sheet-row">
+                <h4 style="line-height:28px">Spent SP:</h4> 
+            </div>
+        </div>
+        <div class="sheet-col" style="width:155px" align="left">
+            <div class="sheet-row">
+                <input type="text" style="width: 12em" name="attr_SPtotal" />
+            </div>
+            <div class="sheet-row">
+                <input type="number" style="width: 12em" name="attr_SPspent" />
+            </div>
+        </div>
+        <div class="sheet-col" style="width:5px">
+        </div>
+        <div class="sheet-col" style="width:90px" align="left">
+            <div class="sheet-row">
+                <h4 style="line-height:28px">Unspent SP:</h4> 
+            </div>
+            <div class="sheet-row">
+                <h4 style="line-height:28px">Banked HP:</h4> 
+            </div>
+        </div>
+        <div class="sheet-col" style="width:155px" align="left">
+            <div class="sheet-row">
+                <input type="number" style="width: 12em" name="attr_SPunspent" value="@{SPtotal}-@{SPspent}" disabled="true"/>
+            </div>
+            <div class="sheet-row">
+                <select name="attr_bankedHP" class="dtype" value="0">
+                    <option value="0" selected="true">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+            </div>
         </div>
     <br>
     <br>
+    
 <!-- ABILITIES -->
     <div>
         <h2 style="text-align: center">ABILITIES</h2>
@@ -356,7 +340,7 @@
             <h3 align="center">Sin Benefit</h3>
             <textarea name="attr_sinbenefit" style="width:235px; height:80px"></textarea>
         </div>   
-    <br>
+    <hr/>
 <!-- Flaws -->
     <h3>Flaws</h3>
     <div class='sheet-3colrow'>
@@ -902,28 +886,17 @@
                 <option value="@{intuition}">Intuition</option>
                 <option value="@{personality}">Personality</option>
             </select>
-            <button type='roll' value='/em rolls a ?{Skill} Specialization\n/r {[[(@{specialization}+@{focusAb}-@{wounds}+?{Modifier|0})]]d10!sd}>6' name='roll_specialization'></button>
+            <button type='roll' value='/em rolls [@{focus}]\n/r {[[(@{specialization}+@{focusAb}-@{wounds}+?{Modifier|0})]]d10!sd}>6' name='roll_specialization'></button>
             </fieldset>
 <br>
         </div>
         <br>
         <div class="sheet-row">
-            <h3>Trained Knowledge</h3>
-        </div>
-        <div class="sheet-row">
-        <fieldset class="repeating_knowledges">            
-            <input type="text" style="width: 66%" name="attr_trainedknowledge"/>
-            <input type="number" style="width: 3em" name="attr_skilltotal" value="@{scholarship}+@{reason}" disabled="true"/>
-            <button type='roll' value='/em rolls a Trained Knowledge\n/r {[[(@{scholarship}+@{reason}-@{wounds}+?{Modifier|0})]]d10!sd}>7' name='roll_knowledgeTRN'></button>      
-        </fieldset>
-        </div>
-    <br>
-        <div class="sheet-row">
             <h3>Languages</h3>
         </div>
         <div class="sheet-row">
             <input type='checkbox' name='attr_literacy' value='1' /><span></span>
-            <input type="text" style="width: 40%" name="attr_languageNTV" value="Native"/>
+            <input type="text" style="width: 58%" name="attr_languageNTV" value="Native"/>
             <select name="attr_nativelanguage">
                 <option value="0">0</option>
                 <option value="1">1</option>
@@ -932,13 +905,12 @@
                 <option value="4">4</option>
                 <option value="5">5</option>
             </select>
-            <input type="number" style="width: 3em" name="attr_skilltotal" value="@{nativelanguageRk}+@{reason}" disabled="true"/>
             <button type='roll' value='/em rolls Speak Language (Native) + Reason\n/r {[[(@{nativelanguage}+@{reason}-@{wounds}+?{Modifier|0})]]d10!sd}>7' name='roll_nativelanguage'></button>
         </div>
         <div class="sheet-row">
         <fieldset class="repeating_languages">            
             <input type='checkbox' name='attr_literacy' value='1' /><span></span>
-            <input type="text" style="width: 40%" name="attr_languageADD"/>
+            <input type="text" style="width: 58%" name="attr_languageADD"/>
             <select name="attr_language">
                 <option value="0" selected="true">0</option>
                 <option value="1">1</option>
@@ -947,8 +919,7 @@
                 <option value="4">4</option>
                 <option value="5">5</option>
             </select>
-            <input type="number" style="width: 3em" name="attr_skilltotal" value="@{languageRk}+@{reason}" disabled="true"/>
-            <button type='roll' value='/em rolls Speak Language + Reason\n/r {[[(@{language}+@{reason}-@{wounds}+?{Modifier|0})]]d10!sd}>7' name='roll_language'></button>      
+            <button type='roll' value='/em rolls @{languageADD} + Reason\n/r {[[(@{language}+@{reason}-@{wounds}+?{Modifier|0})]]d10!sd}>7' name='roll_language'></button>      
         </fieldset>
         <i>Check if Literate</i>
     </div>
@@ -1003,7 +974,7 @@
                 <option value="@{intuition}">Intuition</option>
                 <option value="@{personality}">Personality</option>
             </select>
-            <button type='roll' value='@{name} makes a @{otherSkl} roll\n/r {[[(@{other}+@{otherAb}-@{wounds}+?{Modifier|0})]]d10!sd}>7' name='roll_extraskill'></button>
+            <button type='roll' value='/em rolls @{otherSkl}\n/r {[[(@{other}+@{otherAb}-@{wounds}+?{Modifier|0})]]d10!sd}>7' name='roll_extraskill'></button>
             </fieldset>
             <i>Check if Background</i>
 <!-- End of Skills -->
@@ -1041,26 +1012,31 @@
 <!-- Tab 3: Combat -->
 <div class="sheet-tab-content sheet-tab3">
     <h2 style="text-align: center">COMBAT</h2>
-    <br/>
     <div class='sheet-3colrow'>
     </div>
-    <div class="sheet-col" align="left" style="width:120px">
+    <div class="sheet-col" align="left" style="width:155px">
         <div class="sheet-row">
             <span class="sheet-skill-name" style="line-height:28px">Pace</span>
         </div>
         <br/>
         <div class="sheet-row">
-            <input type="checkbox" name="attr_INITSpec" value="1"/><span></span>
             <span class="sheet-skill-name" style="line-height:28px">Initiative</span>
         </div>
+        <div class="sheet-row">
+            <input type="checkbox" name="attr_INITSpec" value="1"/><span></span>
+            <i>Reflexes is Specialized</i>
+        </div>
     </div>
-    <div class="sheet-col" align="right" style="width:125px">
+    <div class="sheet-col" align="right" style="width:90px">
         <div class="sheet-row">
             <input style="width: 3em" type="number" name="attr_pace" value="floor((@{agility}/2)+1)" disabled="true" />   
         </div>
         <br/>
         <div class="sheet-row">
-            <button type='roll' value='/em rolls Initiative\n/r {(@{reflexes}+@{agility})-(@{surprise}+@{wounds})d10!sd}>[[7-@{INITspec}]] &{tracker}' name='roll_initaitive'></button>
+            <button type='roll' value='/em rolls Initiative\n/r {[[(@{reflexes}+@{agility}-@{surprise}-@{wounds}+?{Modifier|0})]]d10!sd}>[[7-@{INITspec}]] &{tracker}' name='roll_initaitive'></button>
+        
+            
+            
         </div>
     </div>
     <div class="sheet-col" style="width:5px">
@@ -1070,9 +1046,9 @@
             <table width="100%" border="0" align="center">
                 <tr>
                     <td><b>Health Track</b></td>
-                    <td><span><input style="width: 3em" type="number" name="attr_HTHealthy" value="floor((@{toughness}*2)+1)" disabled="true" /></span></td>
-                    <td><span><input style="width: 3em" type="number" name="attr_HTNicked" value="floor((@{toughness}+@{will})+1)" disabled="true" /></span></td>
-                    <td><span><input style="width: 3em" type="number" name="attr_HTWounded" value="floor((@{will}*2)+1)" disabled="true" /></span></td>
+                    <td><span><input style="width: 3em" type="number" name="attr_HTHealthy" value="floor((@{toughness}*2))" disabled="true" /></span></td>
+                    <td><span><input style="width: 3em" type="number" name="attr_HTNicked" value="floor((@{toughness}+@{will}))" disabled="true" /></span></td>
+                    <td><span><input style="width: 3em" type="number" name="attr_HTWounded" value="floor((@{will}*2))" disabled="true" /></span></td>
                     <td><span><input style="width: 3em" type="number" name="attr_HTDying" value="@{toughness}" disabled="true" /></span></td>
                 </tr>
                 <tr>
@@ -1085,7 +1061,7 @@
             </table>
         </div>
         <div class="sheet-row">
-            <span class="sheet-skill-name" style="line-height:28px">Injury Level&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span class="sheet-skill-name" style="line-height:28px">Injury Level&nbsp;&nbsp;&nbsp;</span>
             <select name="attr_injury" style="width: 8em">
                 <option value="0" selected="true">Healthy</option>
                 <option value="1">Nicked</option>
@@ -1094,9 +1070,9 @@
             </select>
             <input type="number" style="width: 3em" name="attr_wounds" value="{(@{injury}+@{exhaustion})}" disabled="true"/>
         </div>
-        <div class="sheet-row">
-            <input type="checkbox" name="attr_ignoreinjury" value="0"/><span></span>
+        <div class="sheet-row" align="right">
             <i>Ignore Injury Penalities</i>
+            <input type="checkbox" name="attr_ignoreinjury" value="0"/><span></span>
         </div>
     </div>
     <div class="sheet-col" style="width:5px">
@@ -1235,6 +1211,7 @@
         </table>
         </div>
     </div>
+    <hr/>
 
 <!-- COMBAT TEST -->
 <div class='sheet-1colrow' align="center">
