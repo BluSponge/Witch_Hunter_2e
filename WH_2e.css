@@ -38,7 +38,7 @@ select {
 span.sheet-skill-name {
     font-size: 14px;
     font-weight: bold;
-    line-height: 28px;
+    line-height: 24px;
 }
 
 div.sheet-row { margin-bottom: 2px; }
@@ -166,6 +166,7 @@ input.sheet-forms + span::before
 /*Hiding Sections*/
 input.arrow
 {
+    float: left;
     display: none;
 }
 
@@ -175,6 +176,9 @@ input.sheet-arrow:checked ~ div.sheet-body
 }
     
 input.sheet-forms:checked + span::before{ content: "•"; }
+{
+    float: left;
+}
 
 /*Sheet Tabs*/
 div.sheet-tab-content { display: none; }
@@ -203,8 +207,6 @@ input.sheet-tab
 input.sheet-tab::before
 {
     content: attr(title);
-
-
     border: solid 2px #E8E8E8;
     text-align: center;
     display: inline-block;
@@ -234,3 +236,54 @@ div.sheet-tab-content
     padding: 5px;
 }
 /*end Sheet Tabs*/
+
+/*Toggle Experiment*/
+/* Fake checkbox */
+/*Hiding Sections*/
+.charsheet .sheet-togglepanel {
+    width: 95%;
+    vertical-align:top;
+    border: 1px 
+    solid black;
+    background-color:#F8F8F8;
+}
+
+input.sheet-arrow {
+    float: left;
+}
+
+div.sheet-body {
+    display: none;
+}
+
+input.sheet-arrow:checked ~ div.sheet-body {
+    float: left;
+    display: block;
+}
+
+/* Classy! */
+div.sheet-body span {
+    display: inline-block;
+    line-height: 28px;
+    width: 8em;
+}
+
+div.sheet-body input {
+    width: 200px;
+    height: 18px;
+}
+
+div.sheet-narrow-column {
+    width: 245px;
+}
+
+div.sheet-narrow-column > h3 {
+    text-align: center;
+}
+
+div.sheet-narrow-column > textarea {
+    height: 100px;
+    width: calc(100% - 10px);
+    margin: 0 5px 0 5px;
+}
+/*End Toggle Experiment*/
