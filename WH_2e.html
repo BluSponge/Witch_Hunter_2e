@@ -90,10 +90,15 @@
         </div>
     <br/>
     <br/>
-    
-<!-- SURVIVAL POINTS Revised -->
-    <div class='sheet-3colrow'>
-    </div>
+<div class='sheet-3colrow'>
+</div>    
+<!-- Hidden section Experiment -->
+<!-- Fighting Styles -->
+    <input type="checkbox" name="attr_traditions-toggle" class="sheet-arrow"/ align="left"><span></span>
+    <h4 align="left">Survival Points</h4>
+    <div class="sheet-body">
+        <!-- SURVIVAL POINTS Revised -->
+
         <div class="sheet-col" style="width:90px" align="left">
             <div class="sheet-row">
                 <h4 style="line-height:28px">Rank:</h4>
@@ -172,6 +177,10 @@
                 </select>
             </div>
         </div>
+    </div>
+    
+<br>   
+
     <br>
     <br>
     
@@ -358,8 +367,55 @@
         <div class="sheet-col" style="width:245px" align="center">
             <input type="text" style="width: 100%" name="attr_flaw03"/>
         </div>
+    <br>
+    <br>
+<!-- Specific Flaws for Packaging -->
+    <div class='sheet-3colrow'>
+    </div>
+        <div class="sheet-col" style="width:245px" align="left">
+            <div class="sheet-row">
+                <input type='checkbox' name='attr_corpulent' value='1' /><span></span>
+                <i>Corpulent</i>
+            </div>
+            <div class="sheet-row">
+                <input type='checkbox' name='attr_craven' value='1' /><span></span>
+                <i>Craven</i>
+            </div>
+            <div class="sheet-row">
+                <input type='checkbox' name='attr_glassjaw' value='1' /><span></span>
+                <i>Glass Jaw</i>
+            </div>
+        </div>
+        <div class="sheet-col" style="width:5px">
+            </div>
+        <div class="sheet-col" style="width:245px" align="left">
+            <div class="sheet-row">
+                <input type='checkbox' name='attr_lame' value='1' /><span></span>
+                <i>Lame</i>
+            </div>
+            <div class="sheet-row">
+                <input type='checkbox' name='attr_lpthreshold' value='1' /><span></span>
+                <i>Low Pain Threshold</i>
+            </div>            
+            <div class="sheet-row">
+                <input type='checkbox' name='attr_scrawny' value='1' /><span></span>
+                <i>Scrawny</i>
+            </div>
+        </div>
+        <div class="sheet-col" style="width:5px">
+        </div>
+        <div class="sheet-col" style="width:245px" align="left">
+            <div class="sheet-row">
+                <input type='checkbox' name='attr_torpid' value='1' /><span></span>
+                <i>Torpid</i>
+            </div>
+            <div class="sheet-row">
+                <input type='checkbox' name='attr_weakwilled' value='1' /><span></span>
+                <i>Weak Willed</i>
+            </div>
+        </div>
     <hr/>
-</div>
+</div>    
 
 <!-- Tab 2: Skills & Talents -->
 <div class="sheet-tab-content sheet-tab2">
@@ -1006,6 +1062,42 @@
         <input type="text" style="width: 100%" name="attr_talentH"/>
         </fieldset>
 </div>
+    <br>
+    <br>
+<!-- Specific Talents for Packaging -->
+    <div class='sheet-3colrow'>
+    </div>
+        <div class="sheet-col" style="width:245px" align="left">
+            <div class="sheet-row">
+                <input type='checkbox' name='attr_fearless' value='2' /><span></span>
+                <i>Fearless</i>
+            </div>
+            <div class="sheet-row">
+                <input type='checkbox' name='attr_incrediblereflexes' value='2' /><span></span>
+                <i>Incredible Reflexes</i>
+            </div>
+        </div>
+        <div class="sheet-col" style="width:5px">
+            </div>
+        <div class="sheet-col" style="width:245px" align="left">
+            <div class="sheet-row">
+                <input type='checkbox' name='attr_swift' value='1' /><span></span>
+                <i>Swift</i>
+            </div>
+            <div class="sheet-row">
+                <input type='checkbox' name='attr_tough' value='1' /><span></span>
+                <i>Tough</i>
+            </div>
+        </div>
+        <div class="sheet-col" style="width:5px">
+        </div>
+        <div class="sheet-col" style="width:245px" align="left">
+            <div class="sheet-row">
+                <input type='checkbox' name='attr_veteran' value='1' /><span></span>
+                <i>Veteran Warrior</i>
+            </div>
+        </div>
+    <hr/>
 <hr/>
 </div>
 
@@ -1016,27 +1108,33 @@
     </div>
     <div class="sheet-col" align="left" style="width:155px">
         <div class="sheet-row">
-            <span class="sheet-skill-name" style="line-height:28px">Pace</span>
-        </div>
-        <br/>
-        <div class="sheet-row">
-            <span class="sheet-skill-name" style="line-height:28px">Initiative</span>
+            <span class="sheet-skill-name">Pace</span>
         </div>
         <div class="sheet-row">
             <input type="checkbox" name="attr_INITSpec" value="1"/><span></span>
-            <i>Reflexes is Specialized</i>
+            <span class="sheet-skill-name">Initiative</span>
+        </div>
+        <div class="sheet-row">
+            <input type="checkbox" name="attr_DODGESpec" value="1"/><span></span>
+            <span class="sheet-skill-name">Dodge</span>
+        </div>
+                <div class="sheet-row">
+            <input type="checkbox" name="attr_PARRYSpec" value="1"/><span></span>
+            <span class="sheet-skill-name">Parry</span>
         </div>
     </div>
     <div class="sheet-col" align="right" style="width:90px">
         <div class="sheet-row">
-            <input style="width: 3em" type="number" name="attr_pace" value="floor((@{agility}/2)+1)" disabled="true" />   
+            <input style="width: 3em" type="number" name="attr_pace" value="floor((@{agility}/2)+1-@{lame}-@{corpulent}+@{swift})" disabled="true" />   
         </div>
-        <br/>
         <div class="sheet-row">
-            <button type='roll' value='/em rolls Initiative\n/r {[[(@{reflexes}+@{agility}-@{surprise}-@{wounds}+?{Modifier|0})]]d10!sd}>[[7-@{INITspec}]] &{tracker}' name='roll_initaitive'></button>
-        
-            
-            
+            <button type='roll' value='/em rolls Initiative\n/r {[[(@{reflexes}+@{agility}-@{surprise}-@{torpid}-@{craven}-@{wounds}+?{Modifier|0})]]d10!sd}>[[7-@{INITspec}]] &{tracker}' name='roll_initaitive'></button>   
+        </div>
+        <div class="sheet-row">
+            <button type='roll' value='/em rolls to Dodge\n/r {[[(@{reflexes}+@{agility}+@{incrediblereflexes}-@{wounds}+?{Modifier|0})]]d10!sd}>[[7-@{DODGESpec}]]' name='roll_dodge'></button>   
+        </div>
+        <div class="sheet-row">
+            <button type='roll' value='/em rolls to Parry\n/r {[[(@{reflexes}+@{agility}+@{incrediblereflexes}-@{wounds}+?{Modifier|0})]]d10!sd}>[[7-@{PARRYSpec}]]' name='roll_parry'></button>   
         </div>
     </div>
     <div class="sheet-col" style="width:5px">
@@ -1046,10 +1144,10 @@
             <table width="100%" border="0" align="center">
                 <tr>
                     <td><b>Health Track</b></td>
-                    <td><span><input style="width: 3em" type="number" name="attr_HTHealthy" value="floor((@{toughness}*2))" disabled="true" /></span></td>
-                    <td><span><input style="width: 3em" type="number" name="attr_HTNicked" value="floor((@{toughness}+@{will}))" disabled="true" /></span></td>
-                    <td><span><input style="width: 3em" type="number" name="attr_HTWounded" value="floor((@{will}*2))" disabled="true" /></span></td>
-                    <td><span><input style="width: 3em" type="number" name="attr_HTDying" value="@{toughness}" disabled="true" /></span></td>
+                    <td><span><input style="width: 3em" type="number" name="attr_HTHealthy" value="floor(((@{toughness}-@{glassjaw})*2)-@{scrawny}+@{tough})" disabled="true" /></span></td>
+                    <td><span><input style="width: 3em" type="number" name="attr_HTNicked" value="floor(((@{toughness}-@{glassjaw})+@{will})-@{scrawny}+@{tough})" disabled="true" /></span></td>
+                    <td><span><input style="width: 3em" type="number" name="attr_HTWounded" value="floor((@{will}*2)-@{scrawny}+@{tough})" disabled="true" /></span></td>
+                    <td><span><input style="width: 3em" type="number" name="attr_HTDying" value="@{toughness}-@{glassjaw}-@{scrawny}+@{tough}" disabled="true" /></span></td>
                 </tr>
                 <tr>
                     <th></th>
@@ -1064,9 +1162,9 @@
             <span class="sheet-skill-name" style="line-height:28px">Injury Level&nbsp;&nbsp;&nbsp;</span>
             <select name="attr_injury" style="width: 8em">
                 <option value="0" selected="true">Healthy</option>
-                <option value="1">Nicked</option>
-                <option value="2">Wounded</option>
-                <option value="3">Dying</option>
+                <option value="1+@{lpthreshold}">Nicked</option>
+                <option value="2+@{lpthreshold}">Wounded</option>
+                <option value="3+@{lpthreshold}">Dying</option>
             </select>
             <input type="number" style="width: 3em" name="attr_wounds" value="{(@{injury}+@{exhaustion})}" disabled="true"/>
         </div>
@@ -1093,7 +1191,7 @@
     </div>
     <div class="sheet-col" align="right" style="width:100px">
         <div class="sheet-row">
-            <button type='roll' value='/em rolls for Fear\n/r {[[(@{resolve}+@{courage}-(@{shaken}+@{wounds})+?{Modifier|0})]]d10!sd}>[[7-@{RESSpec}]]' name='roll_fear'></button>
+            <button type='roll' value='/em rolls for Fear\n/r {[[(@{resolve}+@{courage})-@{shaken}-@{wounds}-{craven}+@{fearless}+?{Modifier|0})]]d10!sd}>[[7-@{RESSpec}]]' name='roll_fear'></button>
         
         
             
@@ -1103,7 +1201,7 @@
                 <option value="@{endurance}+@{toughness}">Endurance</option>
                 <option value="@{resolve}+@{courage}">Resolve</option>
             </select>
-            <button type='roll' value='/em rolls for Unconsciousness\n/r {[[(@{unconscious}-@{wounds})]]d10!sd}>[[7-@{UNCONSpec}]] vs D[[3+@{vanquished}]]' name='roll_unconsciousness'></button>
+            <button type='roll' value='/em rolls for Unconsciousness\n/r {[[(@{unconscious}+@{veteranwarrior}-@{wounds})]]d10!sd}>[[7-@{UNCONSpec}]] vs D[[3+@{vanquished}]]' name='roll_unconsciousness'></button>
         </div>
         <div class="sheet-row">
             <select name="attr_NAThealing" style="width:5em">
@@ -1182,7 +1280,7 @@
     <div class="sheet-col" style="width:25px">
         <!-- Auto-Calculating Fields -->
         <div class="sheet-row">
-            <input style="width: 3em" type="number" name="attr_discipline" value="floor((@{courage}+@{will})/2)+@{discmod}" disabled="true" />
+            <input style="width: 3em" type="number" name="attr_discipline" value="floor((@{courage}+@{will})/2)-@{weakwilled}+@{discmod}" disabled="true" />
         </div>
         <div class="sheet-row">
             <input style="width: 3em" type="text" name="attr_discmod" value="0"/>
