@@ -7,20 +7,22 @@
 
 h1, h2, h3 {
    font-family: 'IM Fell English SC', serif;
-
-   /* Your other headings CSS */
 }
 
+/* Inputs */
 .charsheet label {
     display: inline-block;
     width: 75px;
     text-align: right;
-    padding-bottom: 0px;
+    padding-bottom: 2px;
+    margin-top: 14px;
+    margin-left: 20px;
 }
 
 .charsheet input {
     display: inline-block;
     width: 155px;
+    margin-bottom: 2px;
 }
 
 .charsheet {
@@ -32,152 +34,40 @@ h1, h2, h3 {
 }
 
 select { 
-    margin-bottom: 0px; 
+    margin-bottom: 2px; 
 }
 
 span.sheet-skill-name {
     font-size: 14px;
     font-weight: bold;
-    line-height: 24px;
+    line-height: 30px;
+}
+
+span.sheet-skill-panel {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 30px;
+    color:#787878;
+}
+
+span.sheet-skill-combat {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 25px;
 }
 
 div.sheet-row { margin-bottom: 2px; }
 
-/* Hide actual dot/checkbox */
-input[type="radio"],
+
+/*Checkboxes*/
 input[type="checkbox"]
 {
-    position: absolute;
-    opacity: 1;
+    position: left;
+    opacity: 100;
     width:15px;
     cursor: pointer;
     z-index: 1;
-    margin-top: 6px;
-}
-
-/* Styles common to fake dot and checkbox */
-input[type="radio"] + span::before,
-input[type="checkbox"] + span::before
-{
-    border: solid 1px #a8a8a8;
-    line-height: 14px;
-    text-align: middle;
-    display: inline-block;
-    vertical-align: middle;
-    
-    -moz-box-shadow: 0 0 2px #ccc;
-    -webkit-box-shadow: 0 0 2px #ccc;
-    box-shadow: 0 0 2px #ccc;
-    
-    background: #f6f6f6;
-    background: -moz-radial-gradient(#f6f6f6, #dfdfdf);
-    background: -webkit-radial-gradient(#f6f6f6, #dfdfdf);
-    background: -ms-radial-gradient(#f6f6f6, #dfdfdf);
-    background: -o-radial-gradient(#f6f6f6, #dfdfdf);
-    background: radial-gradient(#f6f6f6, #dfdfdf);
-}
-
-/* Styles unique to fake dot (checked or left of checked) */
-input[type="radio"]+ span::before
-{
-    content: "•";
-    width: 12px;
-    height: 12px;
-    font-size: 36px;
-    
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-}
-
-/* Styles unique to fake checkbox (unchecked) */
-input[type="checkbox"] + span::before
-{
-    position:relative;
-    content: "";
-    opacity: .25;
-    width: 14px;
-    height: 14px;
-    font-size: 12px;
-    
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-}
-
-/* Styles unique to fake checkbox (checked) */
-input[type="checkbox"]:checked + span::before
-{
-    content: "✖";
-    color: #a00;
-    
-    -moz-box-shadow: 0 0 2px transparent;
-    -webkit-box-shadow: 0 0 2px transparent;
-    box-shadow: 0 0 2px transparent;
-}
-
-/* Remove dot from all radios _after_ selected one */
-input[type="radio"]:checked ~ input[type="radio"]+ span::before
-{    
-    content: "";
-}
-
-input.sheet-used+span::before
-{
-    content: "✖";
-    width: 12px;
-    height: 12px;
-    font-size: 12px;
-    
-    -moz-border-radius: 0%;
-    -webkit-border-radius: 0%;
-    border-radius: 0%;
-}
-
-input.sheet-zero:checked + span::before
-{
-    opacity: 0;
-}
-
-input.sheet-zero:hover + span::before
-{
-    opacity: 1;
-}
-
-input.sheet-zero+ span::before
-{
-    font-size: 12px;
-    content: "✖";
-    opacity: 0.25;
-}
-
-input.sheet-forms
-{
-    width: 118px;
-}
-
-input.sheet-forms + span::before
-{
-    margin-left: 53px;
-    margin-right: 53px;
-    content: ""; 
-}
-
-/*Hiding Sections*/
-input.arrow
-{
-    float: left;
-    display: none;
-}
-
-input.sheet-arrow:checked ~ div.sheet-body
-{
-    float: left;
-}
-    
-input.sheet-forms:checked + span::before{ content: "•"; }
-{
-    float: left;
+    margin-top: -1px;
 }
 
 /*Sheet Tabs*/
@@ -237,53 +127,47 @@ div.sheet-tab-content
 }
 /*end Sheet Tabs*/
 
-/*Toggle Experiment*/
-/* Fake checkbox */
+/*Hiding Sections*/
 /*Hiding Sections*/
 .charsheet .sheet-togglepanel {
     width: 95%;
     vertical-align:top;
     border: 1px 
     solid black;
-    background-color:#F8F8F8;
+    background-color:#F0F0F0;
+    padding-top: 6px;
+    padding-bottom: 2px;
+    padding-left: 6px;
+    padding-right: 6px;
 }
 
+
 input.sheet-arrow {
+    margin-top: 3px;
     float: left;
 }
 
-div.sheet-body {
+div.sheet-togglepanel {
     display: none;
 }
 
-input.sheet-arrow:checked ~ div.sheet-body {
-    float: left;
+input.sheet-arrow:checked ~ div.sheet-togglepanel {
     display: block;
 }
 
-/* Classy! */
-div.sheet-body span {
-    display: inline-block;
-    line-height: 28px;
-    width: 8em;
+.sheet-newtoggel {
+    border-left: 4px solid;
+    color:#787878;
+    padding: 8px 8px 8px 8px;
+    background: #F0F0F0;
+    width: 95%;
+    vertical-align: top;
 }
 
-div.sheet-body input {
-    width: 200px;
-    height: 18px;
+.sheet-details-togglepanel { 
+    text-align: justify;
+    text-justify: inter-word;
+    display: none; 
 }
 
-div.sheet-narrow-column {
-    width: 245px;
-}
-
-div.sheet-narrow-column > h3 {
-    text-align: center;
-}
-
-div.sheet-narrow-column > textarea {
-    height: 100px;
-    width: calc(100% - 10px);
-    margin: 0 5px 0 5px;
-}
-/*End Toggle Experiment*/
+input.sheet-arrow:checked ~ .sheet-details-togglepanel { display: block; }
