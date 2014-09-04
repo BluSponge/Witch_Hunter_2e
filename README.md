@@ -1,4 +1,4 @@
-Witch Hunter: The Invisible World (2nd edition)
+<h1>Witch Hunter: The Invisible World (2nd edition)</h1>
 Publisher: Paradigm Concepts, Inc.
 Character Sheet by Tom (blusponge)
 Big Thanks to the helpful contributions of Brian, without whom this sheet wouldn't be nearly as functional.
@@ -12,10 +12,10 @@ Background Skills (Skills), Literacy (Language): These checkboxes are for bookke
 
 Hidden Areas (Survivor Points, Flaw Details, Talent Details and Conditions): These chackboxes hide and reveal this information, a lot of which will rarely need referencing in play.  Checking the checkboxes within these sections activate bonuses and penalties provided by these conditions and are handled in the background.
 
-Organized Play
+<h4>Organized Play</h4>
 This section is provided for potential Witch Hunter: Revelations or other organized play events.  This allows the player and GM to reference information from previous ARs  and is for bookkeeping only.
 
-Known Issues
+<h4>Known Issues</h4>
 For some reason, the tab bars are not visible in Firefox.  To date, no one has been able to figure out the cause of this issue.  I suspect some sort of CSS error or inconsistency.
 
 If you find any additional errors (or have suggested fixes or features) please email me at: blusponge-at-verizon-dot-com
