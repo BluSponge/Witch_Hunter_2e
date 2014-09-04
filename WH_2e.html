@@ -26,10 +26,10 @@
     <div class='sheet-3colrow'>
     </div>
         <div class="sheet-col" style="width:90px" align="left">
-            <h4 style="line-height:28px">Name:</h4>
-            <h4 style="line-height:28px">Nationality:</h4>
-            <h4 style="line-height:28px">Gender:</h4>
-            <h4 style="line-height:28px">Religion:</h4> 
+            <span class="sheet-skill-name">Name:</span>
+            <span class="sheet-skill-name">Nationality:</span>
+            <span class="sheet-skill-name">Gender:</span>
+            <span class="sheet-skill-name">Religion:</span> 
         </div>
         <div class="sheet-col" style="width:155px" align="left">
             <input type="text" name="attr_name" />
@@ -40,10 +40,10 @@
         <div class="sheet-col" style="width:5px">
         </div>
         <div class="sheet-col" style="width:90px" align="left">
-            <h4 style="line-height:28px">Background:</h4>
-            <h4 style="line-height:28px">Standing:</h4>
-            <h4 style="line-height:28px">Order:</h4>
-            <h4 style="line-height:28px">Catalyst:</h4>
+            <span class="sheet-skill-name">Background:</span>
+            <span class="sheet-skill-name">Standing:</span>
+            <span class="sheet-skill-name">Order:</span>
+            <span class="sheet-skill-name">Catalyst:</span>
         </div>
         <div class="sheet-col" style="width:155px" align="left">
             <input type="text" name="attr_background" />
@@ -54,10 +54,10 @@
         <div class="sheet-col" style="width:5px">
         </div>
         <div class="sheet-col" style="width:90px" align="left">
-            <h4 style="line-height:28px">Virtue:</h4>
-            <h4 style="line-height:28px">Sin (Vice):</h4>
-            <h4 style="line-height:28px">True Faith:</h4>
-            <h4 style="line-height:28px">Damnation:</h4>
+            <span class="sheet-skill-name">Virtue:</span>
+            <span class="sheet-skill-name">Sin (Vice):</span>
+            <span class="sheet-skill-name">True Faith:</span>
+            <span class="sheet-skill-name">Damnation:</span>
         </div>
         <div class="sheet-col" style="width:155px" align="left">
             <input type="text" name="attr_virtue" />
@@ -92,19 +92,16 @@
     <br/>
 <div class='sheet-3colrow'>
 </div>    
-<!-- Hidden section Experiment -->
-<!-- Fighting Styles -->
-    <input type="checkbox" name="attr_traditions-toggle" class="sheet-arrow"/ align="left"><span></span>
-    <h4 align="left">Survival Points</h4>
-    <div class="sheet-body">
-        <!-- SURVIVAL POINTS Revised -->
-
+<!-- Survivor Point Toggle Panel -->
+<div class="sheet-newtoggel" style="text-align:left">
+    <input type="checkbox" name="attr_sp-toggle" class="arrow" value="1"/><span></span><b><I>Survivor Points</I></b>
+    <div class="sheet-details-togglepanel">
         <div class="sheet-col" style="width:90px" align="left">
             <div class="sheet-row">
-                <h4 style="line-height:28px">Rank:</h4>
+                <span class="sheet-skill-panel">Rank:</span>
             </div>
             <div class="sheet-row">
-                <h4 style="line-height:28px">Starting SP:</h4>
+                <span class="sheet-skill-panel">Starting SP:</span>
             </div>
         </div>
         <div class="sheet-col" style="width:155px" align="left">
@@ -134,10 +131,10 @@
         </div>
         <div class="sheet-col" style="width:90px" align="left">
             <div class="sheet-row">
-                <h4 style="line-height:28px">Total SP:</h4> 
+                <span class="sheet-skill-panel">Total SP:</span>
             </div>
             <div class="sheet-row">
-                <h4 style="line-height:28px">Spent SP:</h4> 
+                <span class="sheet-skill-panel">Spent SP:</span> 
             </div>
         </div>
         <div class="sheet-col" style="width:155px" align="left">
@@ -152,10 +149,10 @@
         </div>
         <div class="sheet-col" style="width:90px" align="left">
             <div class="sheet-row">
-                <h4 style="line-height:28px">Unspent SP:</h4> 
+                <span class="sheet-skill-panel">Unspent SP:</span> 
             </div>
             <div class="sheet-row">
-                <h4 style="line-height:28px">Banked HP:</h4> 
+                <span class="sheet-skill-panel">Banked HP:</span> 
             </div>
         </div>
         <div class="sheet-col" style="width:155px" align="left">
@@ -178,12 +175,9 @@
             </div>
         </div>
     </div>
-    
-<br>   
+</div>
+<br/>
 
-    <br>
-    <br>
-    
 <!-- ABILITIES -->
     <div>
         <h2 style="text-align: center">ABILITIES</h2>
@@ -207,13 +201,13 @@
     </div>
         <div class="sheet-col" style="width:90px" align="left">
             <div class="sheet-row">
-                <h4 style="line-height:28px">Strength</h4>
+                <span class="sheet-skill-name">Strength</span>
             </div>
             <div class="sheet-row">
-                <h4 style="line-height:28px">Agility</h4>
+                <span class="sheet-skill-name">Agility</span>
             </div>
             <div class="sheet-row">
-                <h4 style="line-height:28px">Toughness</h4>
+                <span class="sheet-skill-name">Toughness</span>
             </div>
         </div>
         <div class="sheet-col" style="width:155px" align="right">
@@ -249,13 +243,13 @@
         </div>
         <div class="sheet-col" style="width:90px" align="left">
             <div class="sheet-row">
-                <h4 style="line-height:28px">Education</h4>
+                <span class="sheet-skill-name">Education</span>
             </div>
             <div class="sheet-row">
-                <h4 style="line-height:28px">Reason</h4>
+                <span class="sheet-skill-name">Reason</span>
             </div>
             <div class="sheet-row">
-                <h4 style="line-height:28px">Will</h4>
+                <span class="sheet-skill-name">Will</span>
             </div>
         </div>
         <div class="sheet-col" style="width:155px" align="right">
@@ -291,13 +285,13 @@
         </div>
         <div class="sheet-col" style="width:90px" align="left">
             <div class="sheet-row">
-                <h4 style="line-height:28px">Courage</h4>
+                <span class="sheet-skill-name">Courage</span>
             </div>
             <div class="sheet-row">
-                <h4 style="line-height:28px">Intuition</h4>
+                <span class="sheet-skill-name">Intuition</span>
             </div>
             <div class="sheet-row">
-                <h4 style="line-height:28px">Personality</h4>
+                <span class="sheet-skill-name">Personality</span>
             </div>
         </div>
         <div class="sheet-col" style="width:155px" align="right">
@@ -369,57 +363,131 @@
         </div>
     <br>
     <br>
-<!-- Specific Flaws for Packaging -->
+<!-- Flaw Details Toggle Panel -->
     <div class='sheet-3colrow'>
     </div>
-        <div class="sheet-col" style="width:245px" align="left">
-            <div class="sheet-row">
-                <input type='checkbox' name='attr_corpulent' value='1' /><span></span>
-                <i>Corpulent</i>
+    
+    <div class="sheet-newtoggel" style="text-align:left">
+        <input type="checkbox" name="attr_flaws-toggle" class="arrow" value="1"/><span></span><b><I>Flaw Details</I></b>
+        <div class="sheet-details-togglepanel">
+            <div class="sheet-col" style="width:245px" align="left">
+                <p><i>Check any of these Flaws the character possesses to activate their penalties. Any modifiers will be applied within the character sheet.</i></p>
             </div>
-            <div class="sheet-row">
-                <input type='checkbox' name='attr_craven' value='1' /><span></span>
-                <i>Craven</i>
+            <div class="sheet-col" style="width:5px">
             </div>
-            <div class="sheet-row">
-                <input type='checkbox' name='attr_glassjaw' value='1' /><span></span>
-                <i>Glass Jaw</i>
+            <div class="sheet-col" style="width:245px" align="left">
+                <div class="sheet-row">
+                    <input type='checkbox' name='attr_corpulent' value='1' /><span></span>
+                    <i>Corpulent</i>
+                </div>
+                <div class="sheet-row">
+                    <input type='checkbox' name='attr_craven' value='1' /><span></span>
+                    <i>Craven</i>
+                </div>
+                <div class="sheet-row">
+                    <input type='checkbox' name='attr_glassjaw' value='1' /><span></span>
+                    <i>Glass Jaw</i>
+                </div>
+                <div class="sheet-row">
+                    <input type='checkbox' name='attr_lame' value='1' /><span></span>
+                    <i>Lame</i>
+                </div>
+            </div>
+            <div class="sheet-col" style="width:5px">
+            </div>
+            <div class="sheet-col" style="width:245px" align="left">
+                
+                <div class="sheet-row">
+                    <input type='checkbox' name='attr_lpthreshold' value='1' /><span></span>
+                    <i>Low Pain Threshold</i>
+                </div>            
+                <div class="sheet-row">
+                    <input type='checkbox' name='attr_scrawny' value='1' /><span></span>
+                    <i>Scrawny</i>
+                </div>
+                <div class="sheet-row">
+                    <input type='checkbox' name='attr_torpid' value='1' /><span></span>
+                    <i>Torpid</i>
+                </div>
+                <div class="sheet-row">
+                    <input type='checkbox' name='attr_weakwilled' value='1' /><span></span>
+                    <i>Weak Willed</i>
+                </div>
             </div>
         </div>
-        <div class="sheet-col" style="width:5px">
-            </div>
-        <div class="sheet-col" style="width:245px" align="left">
-            <div class="sheet-row">
-                <input type='checkbox' name='attr_lame' value='1' /><span></span>
-                <i>Lame</i>
-            </div>
-            <div class="sheet-row">
-                <input type='checkbox' name='attr_lpthreshold' value='1' /><span></span>
-                <i>Low Pain Threshold</i>
-            </div>            
-            <div class="sheet-row">
-                <input type='checkbox' name='attr_scrawny' value='1' /><span></span>
-                <i>Scrawny</i>
-            </div>
-        </div>
-        <div class="sheet-col" style="width:5px">
-        </div>
-        <div class="sheet-col" style="width:245px" align="left">
-            <div class="sheet-row">
-                <input type='checkbox' name='attr_torpid' value='1' /><span></span>
-                <i>Torpid</i>
-            </div>
-            <div class="sheet-row">
-                <input type='checkbox' name='attr_weakwilled' value='1' /><span></span>
-                <i>Weak Willed</i>
-            </div>
-        </div>
-    <hr/>
+    </div>
 </div>    
 
 <!-- Tab 2: Skills & Talents -->
 <div class="sheet-tab-content sheet-tab2">
-<h2 style="text-align: center">SKILLS</h2>
+<br/>
+<!-- Character Sheet Top Experiment -->
+<!-- 3 Columns -->
+<!-- Column 1: Obscure/Custom Dice Pools -->
+<!-- Column 2: Quick Macros (Reactions?) -->
+<!-- Column 3: Combat Book keeping -->
+<div class='sheet-3colrow'>
+</div>
+<div class="sheet-col" style="width:245px" align="right">
+    <input type="checkbox" name="attr_DP1Spec" value="1"/><span></span>
+    <select name="attr_DP1Skl" style="width:90px"> 
+        <option value="0" selected>Unskilled</option> <option value="@{acrobatics}">Acrobatics</option> <option value="@{animalcare}">Animal Care</option> <option value="@{athletics}">Athletics</option> <option value="@{boating}">Boating</option> <option value="@{charm}">Charm</option> <option value="@{command}">Command</option> <option value="@{concentrate}">Concentrate</option> <option value="@{craft}">Craft</option> <option value="@{empathy}">Empathy</option> <option value="@{endurance}">Endurance</option> <option value="@{gamble}">Gamble</option> <option value="@{gunnery}">Gunnery</option> <option value="@{heal}">Heal</option> <option value="@{marksman}">Marksman</option> <option value="@{melee}">Melee</option> <option value="@{mysticism}">Mysticism</option> <option value="@{navigation}">Navigation</option> <option value="@{notice}">Notice</option> <option value="@{pantomime}">Pantomime</option> <option value="@{perform}">Perform</option> <option value="@{prayer}">Prayer</option> <option value="@{ranged}">Ranged</option> <option value="@{reflexes}">Reflexes</option> <option value="@{resolve}">Resolve</option> <option value="@{ride}">Ride</option> <option value="@{scholarship}">Scholarship</option> <option value="@{sorcery}">Sorcery</option> <option value="@{stealth}">Stealth</option> <option value="@{subterfuge}">Subterfuge</option> <option value="@{survival}">Survival</option> <option value="@{unarmed}">Unarmed</option> <option value="@{other1}">Extra Skill</option>  
+    </select>
+    <select name="attr_DP1Abl" style="width:90px"> 
+        <option value="@{strength}" selected>Strength</option> 
+        <option value="@{agility}">Agility</option> 
+        <option value="@{toughness}">Toughness</option> 
+        <option value="@{education}">Education</option> 
+        <option value="@{reason}">Reason</option> 
+        <option value="@{will}">Will</option> 
+        <option value="@{courage}">Courage</option> 
+        <option value="@{intuition}">Intuition</option> 
+        <option value="@{personality}">Personality</option> 
+        </select>
+    <button type='roll' name='roll_DP1roll' value='/em rolls ?{Skill+Ability}\n/r {[[(@{DP1Skl}+@{DP1Abl}-@{wounds}+?{Modifier|0})]]d10!sd}>[[7-@{DP1Spec}]]'></button>    
+</div>
+<div class="sheet-col" style="width:5px" align="right">
+</div>
+<div class="sheet-col" style="width:245px" align="right">
+    <input type="checkbox" name="attr_DP2Spec" value="1"/><span></span>
+    <select name="attr_DP2Skl" style="width:90px"> 
+        <option value="0" selected>Unskilled</option> <option value="@{acrobatics}">Acrobatics</option> <option value="@{animalcare}">Animal Care</option> <option value="@{athletics}">Athletics</option> <option value="@{boating}">Boating</option> <option value="@{charm}">Charm</option> <option value="@{command}">Command</option> <option value="@{concentrate}">Concentrate</option> <option value="@{craft}">Craft</option> <option value="@{empathy}">Empathy</option> <option value="@{endurance}">Endurance</option> <option value="@{gamble}">Gamble</option> <option value="@{gunnery}">Gunnery</option> <option value="@{heal}">Heal</option> <option value="@{marksman}">Marksman</option> <option value="@{melee}">Melee</option> <option value="@{mysticism}">Mysticism</option> <option value="@{navigation}">Navigation</option> <option value="@{notice}">Notice</option> <option value="@{pantomime}">Pantomime</option> <option value="@{perform}">Perform</option> <option value="@{prayer}">Prayer</option> <option value="@{ranged}">Ranged</option> <option value="@{reflexes}">Reflexes</option> <option value="@{resolve}">Resolve</option> <option value="@{ride}">Ride</option> <option value="@{scholarship}">Scholarship</option> <option value="@{sorcery}">Sorcery</option> <option value="@{stealth}">Stealth</option> <option value="@{subterfuge}">Subterfuge</option> <option value="@{survival}">Survival</option> <option value="@{unarmed}">Unarmed</option> <option value="@{other1}">Extra Skill</option>  
+    </select>
+    <select name="attr_DP2Abl" style="width:90px"> 
+        <option value="@{strength}" selected>Strength</option> 
+        <option value="@{agility}">Agility</option> 
+        <option value="@{toughness}">Toughness</option> 
+        <option value="@{education}">Education</option> 
+        <option value="@{reason}">Reason</option> 
+        <option value="@{will}">Will</option> 
+        <option value="@{courage}">Courage</option> 
+        <option value="@{intuition}">Intuition</option> 
+        <option value="@{personality}">Personality</option> 
+        </select>
+    <button type='roll' name='roll_DP2roll' value='/em rolls ?{Skill+Ability}\n/r {[[(@{DP2Skl}+@{DP2Abl}-@{wounds}+?{Modifier|0})]]d10!sd}>[[7-@{DP2Spec}]]'></button>
+</div>
+<div class="sheet-col" style="width:5px" align="right">
+</div>
+<div class="sheet-col" style="width:245px" align="right">
+    <input type="checkbox" name="attr_DP3Spec" value="1"/><span></span>
+    <select name="attr_DP3Skl" style="width:90px"> 
+        <option value="0" selected>Unskilled</option> <option value="@{acrobatics}">Acrobatics</option> <option value="@{animalcare}">Animal Care</option> <option value="@{athletics}">Athletics</option> <option value="@{boating}">Boating</option> <option value="@{charm}">Charm</option> <option value="@{command}">Command</option> <option value="@{concentrate}">Concentrate</option> <option value="@{craft}">Craft</option> <option value="@{empathy}">Empathy</option> <option value="@{endurance}">Endurance</option> <option value="@{gamble}">Gamble</option> <option value="@{gunnery}">Gunnery</option> <option value="@{heal}">Heal</option> <option value="@{marksman}">Marksman</option> <option value="@{melee}">Melee</option> <option value="@{mysticism}">Mysticism</option> <option value="@{navigation}">Navigation</option> <option value="@{notice}">Notice</option> <option value="@{pantomime}">Pantomime</option> <option value="@{perform}">Perform</option> <option value="@{prayer}">Prayer</option> <option value="@{ranged}">Ranged</option> <option value="@{reflexes}">Reflexes</option> <option value="@{resolve}">Resolve</option> <option value="@{ride}">Ride</option> <option value="@{scholarship}">Scholarship</option> <option value="@{sorcery}">Sorcery</option> <option value="@{stealth}">Stealth</option> <option value="@{subterfuge}">Subterfuge</option> <option value="@{survival}">Survival</option> <option value="@{unarmed}">Unarmed</option> <option value="@{other1}">Extra Skill</option>  
+    </select>
+    <select name="attr_DP3Abl" style="width:90px"> 
+        <option value="@{strength}" selected>Strength</option> 
+        <option value="@{agility}">Agility</option> 
+        <option value="@{toughness}">Toughness</option> 
+        <option value="@{education}">Education</option> 
+        <option value="@{reason}">Reason</option> 
+        <option value="@{will}">Will</option> 
+        <option value="@{courage}">Courage</option> 
+        <option value="@{intuition}">Intuition</option> 
+        <option value="@{personality}">Personality</option> 
+        </select>
+    <button type='roll' name='roll_DP3roll' value='/em rolls ?{Skill+Ability}\n/r {[[(@{DP3Skl}+@{DP3Abl}-@{wounds}+?{Modifier|0})]]d10!sd}>[[7-@{DP3Spec}]]'></button>
+</div>
+<hr/>
+    <h2 style="text-align: center">SKILLS</h2>
     <i>Check background skills</i>
     <br>
     <br>
@@ -430,67 +498,67 @@
 <!-- Fighting Skills -->
             <div class="sheet-row">
                 <input type='checkbox' name='attr_backgunnery' value='1' /><span></span>
-                <span class="sheet-skill-name" style="line-height:28px">Gunnery</span>
+                <span class="sheet-skill-name">Gunnery</span>
             </div>
             <div class="sheet-row">
                 <input type='checkbox' name='attr_backmarksman' value='1' /><span></span>
-                <span class="sheet-skill-name" style="line-height:28px">Marksman</span>
+                <span class="sheet-skill-name">Marksman</span>
         </div>
         <div class="sheet-row">
             <input type='checkbox' name='attr_backmelee' value='1' /><span></span>
-            <span class="sheet-skill-name" style="line-height:28px">Melee</span>
+            <span class="sheet-skill-name">Melee</span>
         </div>
         <div class="sheet-row">
             <input type='checkbox' name='attr_backranged' value='1' /><span></span>
-            <span class="sheet-skill-name" style="line-height:28px">Ranged</span>
+            <span class="sheet-skill-name">Ranged</span>
         </div>
         <div class="sheet-row">
             <input type='checkbox' name='attr_backunarmed' value='1' /><span></span>
-            <span class="sheet-skill-name" style="line-height:28px">Unarmed</span>
+            <span class="sheet-skill-name">Unarmed</span>
         </div>
         <br>
         <!-- Interaction Skills -->
         <div class="sheet-row">
             <input type='checkbox' name='attr_backcharm' value='1' /><span></span>
-            <span class="sheet-skill-name" style="line-height:28px">Charm</span>
+            <span class="sheet-skill-name">Charm</span>
         </div>
         <div class="sheet-row">
             <input type='checkbox' name='attr_backcommand' value='1' /><span></span>
-            <span class="sheet-skill-name" style="line-height:28px">Command</span>
+            <span class="sheet-skill-name">Command</span>
         </div>
         <div class="sheet-row">
             <input type='checkbox' name='attr_backempathy' value='1' /><span></span>
-            <span class="sheet-skill-name" style="line-height:28px">Empathy</span>
+            <span class="sheet-skill-name">Empathy</span>
         </div>
         <div class="sheet-row">
             <input type='checkbox' name='attr_backpantomime' value='1' /><span></span>
-            <span class="sheet-skill-name" style="line-height:28px">Pantomime</span>
+            <span class="sheet-skill-name">Pantomime</span>
         </div>
         <div class="sheet-row">
             <input type='checkbox' name='attr_backperform' value='1' /><span></span>
-            <span class="sheet-skill-name" style="line-height:28px">Perform</span>
+            <span class="sheet-skill-name">Perform</span>
         </div>
         <br>
         <!-- Movement Skills -->
         <div class="sheet-row">
             <input type='checkbox' name='attr_backacrobatics' value='1' /><span></span>
-            <span class="sheet-skill-name" style="line-height:28px">Acrobatics</span>
+            <span class="sheet-skill-name">Acrobatics</span>
         </div>
         <div class="sheet-row">
             <input type='checkbox' name='attr_backathletics' value='1' /><span></span>
-            <span class="sheet-skill-name" style="line-height:28px">Athletics</span>
+            <span class="sheet-skill-name">Athletics</span>
         </div>
         <div class="sheet-row">
             <input type='checkbox' name='attr_backboating' value='1' /><span></span>
-            <span class="sheet-skill-name" style="line-height:28px">Boating</span>
+            <span class="sheet-skill-name">Boating</span>
         </div>
         <div class="sheet-row">
             <input type='checkbox' name='attr_backride' value='1' /><span></span>
-            <span class="sheet-skill-name" style="line-height:28px">Ride</span>
+            <span class="sheet-skill-name">Ride</span>
         </div>
         <div class="sheet-row">
             <input type='checkbox' name='attr_backstealth' value='1' /><span></span>
-            <span class="sheet-skill-name" style="line-height:28px">Stealth</span>
+            <span class="sheet-skill-name">Stealth</span>
         </div>
     </div>
     <div class="sheet-col">
@@ -688,61 +756,61 @@
         <!-- Reaction Skills -->
         <div class="sheet-row">
             <input type='checkbox' name='attr_backconcentrate' value='1' /><span></span>
-            <span class="sheet-skill-name" style="line-height:28px">Concentrate</span>
+            <span class="sheet-skill-name">Concentrate</span>
         </div>
         <div class="sheet-row">
             <input type='checkbox' name='attr_backendurance' value='1' /><span></span>
-            <span class="sheet-skill-name" style="line-height:28px">Endurance</span>
+            <span class="sheet-skill-name">Endurance</span>
         </div>
         <div class="sheet-row">
             <input type='checkbox' name='attr_backnotice' value='1' /><span></span>
-            <span class="sheet-skill-name" style="line-height:28px">Notice</span>
+            <span class="sheet-skill-name">Notice</span>
         </div>
         <div class="sheet-row">
             <input type='checkbox' name='attr_backreflexes' value='1' /><span></span>
-            <span class="sheet-skill-name" style="line-height:28px">Reflexes</span>
+            <span class="sheet-skill-name">Reflexes</span>
         </div>
         <div class="sheet-row">
             <input type='checkbox' name='attr_backresolve' value='1' /><span></span>
-            <span class="sheet-skill-name" style="line-height:28px">Resolve</span>
+            <span class="sheet-skill-name">Resolve</span>
         </div>
         <br>
         <!-- Professional Skills -->
         <div class="sheet-row">
             <input type='checkbox' name='attr_backanimal' value='1' /><span></span>
-            <span class="sheet-skill-name" style="line-height:28px">Animal Care</span>
+            <span class="sheet-skill-name">Animal Care</span>
         </div>
         <div class="sheet-row">
             <input type='checkbox' name='attr_backcraft' value='1' /><span></span>
-            <span class="sheet-skill-name" style="line-height:28px">Craft</span>
+            <span class="sheet-skill-name">Craft</span>
         </div>
         <div class="sheet-row">
             <input type='checkbox' name='attr_backgamble' value='1' /><span></span>
-            <span class="sheet-skill-name" style="line-height:28px">Gamble</span>
+            <span class="sheet-skill-name">Gamble</span>
         </div>
         <div class="sheet-row">
             <input type='checkbox' name='attr_backheal' value='1' /><span></span>
-            <span class="sheet-skill-name" style="line-height:28px">Heal</span>
+            <span class="sheet-skill-name">Heal</span>
         </div>
         <div class="sheet-row">
             <input type='checkbox' name='attr_backmysticism' value='1' /><span></span>
-            <span class="sheet-skill-name" style="line-height:28px">Mysticism</span>
+            <span class="sheet-skill-name">Mysticism</span>
         </div>
         <div class="sheet-row">
             <input type='checkbox' name='attr_backnavigation' value='1' /><span></span>
-            <span class="sheet-skill-name" style="line-height:28px">Navigation</span>
+            <span class="sheet-skill-name">Navigation</span>
         </div>
         <div class="sheet-row">
             <input type='checkbox' name='attr_backscholar' value='1' /><span></span>
-            <span class="sheet-skill-name" style="line-height:28px">Scholarship</span>
+            <span class="sheet-skill-name">Scholarship</span>
         </div>
         <div class="sheet-row">
             <input type='checkbox' name='attr_backsubterfuge' value='1' /><span></span>
-            <span class="sheet-skill-name" style="line-height:28px">Subterfuge</span>
+            <span class="sheet-skill-name">Subterfuge</span>
         </div>
         <div class="sheet-row">
             <input type='checkbox' name='attr_backsurvival' value='1' /><span></span>
-            <span class="sheet-skill-name" style="line-height:28px">Survival</span>
+            <span class="sheet-skill-name">Survival</span>
         </div>
     </div>
     <div class="sheet-col">
@@ -1064,42 +1132,48 @@
 </div>
     <br>
     <br>
-<!-- Specific Talents for Packaging -->
+<!-- Talent Details Toggle Panel -->
     <div class='sheet-3colrow'>
     </div>
-        <div class="sheet-col" style="width:245px" align="left">
-            <div class="sheet-row">
-                <input type='checkbox' name='attr_fearless' value='2' /><span></span>
-                <i>Fearless</i>
-            </div>
-            <div class="sheet-row">
-                <input type='checkbox' name='attr_incrediblereflexes' value='2' /><span></span>
-                <i>Incredible Reflexes</i>
+        <div class="sheet-newtoggel" style="text-align:left">
+            <input type="checkbox" name="attr_talent-toggle" class="arrow" value="1"/><span></span><b><I>Talent Details</I></b>
+            <div class="sheet-details-togglepanel">
+                <div class="sheet-col" style="width:245px" align="left">
+                    <p><i>Check any of these Talents the character possesses to activate their bonuses. Any modifiers will be applied within the character sheet.</i></p>
+                </div>
+                <div class="sheet-col" style="width:5px">
+                </div>
+                <div class="sheet-col" style="width:245px" align="left">
+                    <div class="sheet-row">
+                        <input type='checkbox' name='attr_fearless' value='2' /><span></span>
+                        <i>Fearless</i>
+                    </div>
+                    <div class="sheet-row">
+                        <input type='checkbox' name='attr_incrediblereflexes' value='2' /><span></span>
+                        <i>Incredible Reflexes</i>
+                    </div>
+                    <div class="sheet-row">
+                        <input type='checkbox' name='attr_swift' value='1' /><span></span>
+                        <i>Swift</i>
+                    </div>
+                </div>
+                <div class="sheet-col" style="width:5px">
+                </div>
+                <div class="sheet-col" style="width:245px" align="left">
+                    <div class="sheet-row">
+                        <input type='checkbox' name='attr_tough' value='1' /><span></span>
+                        <i>Tough</i>
+                    </div>
+                    <div class="sheet-row">
+                        <input type='checkbox' name='attr_veteran' value='1' /><span></span>
+                        <i>Veteran Warrior</i>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="sheet-col" style="width:5px">
-            </div>
-        <div class="sheet-col" style="width:245px" align="left">
-            <div class="sheet-row">
-                <input type='checkbox' name='attr_swift' value='1' /><span></span>
-                <i>Swift</i>
-            </div>
-            <div class="sheet-row">
-                <input type='checkbox' name='attr_tough' value='1' /><span></span>
-                <i>Tough</i>
-            </div>
-        </div>
-        <div class="sheet-col" style="width:5px">
-        </div>
-        <div class="sheet-col" style="width:245px" align="left">
-            <div class="sheet-row">
-                <input type='checkbox' name='attr_veteran' value='1' /><span></span>
-                <i>Veteran Warrior</i>
-            </div>
-        </div>
-    <hr/>
+    </div>
 <hr/>
-</div>
+
 
 <!-- Tab 3: Combat -->
 <div class="sheet-tab-content sheet-tab3">
@@ -1108,24 +1182,24 @@
     </div>
     <div class="sheet-col" align="left" style="width:155px">
         <div class="sheet-row">
-            <span class="sheet-skill-name">Pace</span>
+            <span class="sheet-skill-combat" style="line-height:30px">Pace</span>
         </div>
         <div class="sheet-row">
             <input type="checkbox" name="attr_INITSpec" value="1"/><span></span>
-            <span class="sheet-skill-name">Initiative</span>
+            <span class="sheet-skill-combat">Initiative</span>
         </div>
         <div class="sheet-row">
             <input type="checkbox" name="attr_DODGESpec" value="1"/><span></span>
-            <span class="sheet-skill-name">Dodge</span>
+            <span class="sheet-skill-combat">Dodge</span>
         </div>
                 <div class="sheet-row">
             <input type="checkbox" name="attr_PARRYSpec" value="1"/><span></span>
-            <span class="sheet-skill-name">Parry</span>
+            <span class="sheet-skill-combat">Parry</span>
         </div>
     </div>
     <div class="sheet-col" align="right" style="width:90px">
         <div class="sheet-row">
-            <input style="width: 3em" type="number" name="attr_pace" value="floor((@{agility}/2)+1-@{lame}-@{corpulent}+@{swift})" disabled="true" />   
+            <input style="width: 3em" type="number" name="attr_pace" value="floor((@{agility}/2)+1-@{lame}-@{corpulent}+@{swift})" disabled="true" />
         </div>
         <div class="sheet-row">
             <button type='roll' value='/em rolls Initiative\n/r {[[(@{reflexes}+@{agility}-@{surprise}-@{torpid}-@{craven}-@{wounds}+?{Modifier|0})]]d10!sd}>[[7-@{INITspec}]] &{tracker}' name='roll_initaitive'></button>   
@@ -1159,18 +1233,21 @@
             </table>
         </div>
         <div class="sheet-row">
-            <span class="sheet-skill-name" style="line-height:28px">Injury Level&nbsp;&nbsp;&nbsp;</span>
+            <span class="sheet-skill-combat">Injury Level&nbsp;&nbsp;&nbsp;</span>
             <select name="attr_injury" style="width: 8em">
                 <option value="0" selected="true">Healthy</option>
                 <option value="1+@{lpthreshold}">Nicked</option>
                 <option value="2+@{lpthreshold}">Wounded</option>
                 <option value="3+@{lpthreshold}">Dying</option>
             </select>
-            <input type="number" style="width: 3em" name="attr_wounds" value="{(@{injury}+@{exhaustion})}" disabled="true"/>
+            <input type="number" style="width: 3em" name="attr_wounds" value="{((@{injury}+@{exhaustion})-@{ignoreinjury})}" disabled="true"/>
+        
+
+            
         </div>
         <div class="sheet-row" align="right">
             <i>Ignore Injury Penalities</i>
-            <input type="checkbox" name="attr_ignoreinjury" value="0"/><span></span>
+            <input type="checkbox" name="attr_ignoreinjury" value="{(@{injury}*1)}"/><span></span>
         </div>
     </div>
     <div class="sheet-col" style="width:5px">
@@ -1178,15 +1255,15 @@
     <div class="sheet-col" align="left" style="width:135px">
         <div class="sheet-row">
             <input type="checkbox" name="attr_RESSpec" value="1"/><span></span>
-            <span class="sheet-skill-name" style="line-height:28px">Fear</span>
+            <span class="sheet-skill-combat">Fear</span>
         </div>
         <div class="sheet-row">
             <input type="checkbox" name="attr_UNCONSpec" value="1"/><span></span>
-            <span class="sheet-skill-name" style="line-height:28px">Unconciousness </span>
+            <span class="sheet-skill-combat">Unconciousness </span>
         </div>
        <div class="sheet-row">
             <input type="checkbox" name="attr_NATSpec" value="1"/><span></span>
-            <span class="sheet-skill-name" style="line-height:28px">Natural Healing</span>
+            <span class="sheet-skill-combat">Natural Healing</span>
         </div>
     </div>
     <div class="sheet-col" align="right" style="width:100px">
@@ -1211,24 +1288,43 @@
             <button type='roll' value='/em rolls for Natural Healing\n/r {[[(@{NAThealing}-@{wounds})]]d10!sd}>[[7-@{NATSpec}]] to heal @{toughness} points of damage' name='roll_unconsciousness'></button>
         </div>
     </div>
-<hr width="75%">
+<br/>
+<br/>
 <div class='sheet-3colrow'>
 </div>
-    <div class="sheet-row">
-    <table width="90%" border="0" align="center">
-        <tr>
-            <td><b>Conditions</b></td>
-            <td><input type='checkbox' name='attr_surprise' value='2' /><span></span></td>
-            <td><span><i>Surprised</i></span></td>
-            <td><input type='checkbox' name='attr_exhaustion' value='1' /><span></span></td>
-            <td><span><i>Exhausted</i></span></td>
-            <td><input type='checkbox' name='attr_vanquished' value='1' /><span></span></td>
-            <td><span><i>Vanquished</i></span></td>
-            <td><input type='checkbox' name='attr_shaken' value='1' /><span></span></td>
-            <td><span><i>Shaken</i></span></td>
-        </tr>
-    </table>
-    </div>
+
+        <div class="sheet-newtoggel" style="text-align:left">
+            <input type="checkbox" name="attr_conditions-toggle" class="arrow" value="1"/><span></span><b><I>Conditions</I></b>
+            <div class="sheet-details-togglepanel">
+                <div class="sheet-col" style="width:245px" align="left">
+                    <p><i>Check any of these Conditions to activate their bonuses/penalties. Any modifiers will be applied within the character sheet.</i></p>
+                </div>
+                <div class="sheet-col" style="width:5px">
+                </div>
+                <div class="sheet-col" style="width:245px" align="left">
+                    <div class="sheet-row">
+                        <input type='checkbox' name='attr_surprise' value='2' /><span></span>
+                        <i>Surprised</i>
+                    </div>
+                    <div class="sheet-row">
+                        <input type='checkbox' name='attr_exhaustion' value='2' /><span></span>
+                        <i>Exhausted</i>
+                    </div>
+                </div>
+                <div class="sheet-col" style="width:5px">
+                </div>
+                <div class="sheet-col" style="width:245px" align="left">
+                    <div class="sheet-row">
+                        <input type='checkbox' name='attr_vanquished' value='1' /><span></span>
+                        <i>Vanquished</i>
+                    </div>
+                    <div class="sheet-row">
+                        <input type='checkbox' name='attr_shaken' value='1' /><span></span>
+                        <i>Shaken</i>
+                    </div>
+                </div>
+            </div>
+        </div>
 <hr/>
 <!-- COMBAT TEST -->
 <h2 style="text-align: center">Defenses</h2>
