@@ -1,7 +1,7 @@
 <h1>Witch Hunter: The Invisible World (2nd edition)</h1>
-<b>Publisher:</b> Paradigm Concepts, Inc.
-<b>Character Sheet by Tom (blusponge)</b>
-<i>Big Thanks to the helpful contributions of Brian, without whom this sheet wouldn't be nearly as functional.</i>
+<p><b>Publisher:</b> Paradigm Concepts, Inc.
+<p><b>Character Sheet by Tom (blusponge)</b>
+<p><i>Big Thanks to the helpful contributions of Brian, without whom this sheet wouldn't be nearly as functional.</i>
 
 <h4>A Note on Checkboxes</h4>
 Checkboxes are used throughout this sheet for a variety of purposes.  I have tried to label all their uses, but in case there is any confusion…
